@@ -1,41 +1,42 @@
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 background:#f4f4f4;
 text-align:center;
-}
-
-header{
-background:#4CAF50;
-color:white;
-padding:20px;
+padding:40px;
 }
 
 .container{
-margin-top:30px;
+background:white;
+padding:30px;
+border-radius:10px;
+width:500px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
 input{
 padding:10px;
-width:200px;
+width:70%;
+font-size:16px;
+margin-top:10px;
 }
 
 button{
 padding:10px 20px;
-background:#4CAF50;
+font-size:16px;
+margin-top:15px;
+cursor:pointer;
+background:#007bff;
 color:white;
 border:none;
-cursor:pointer;
-}
-
-ul{
-list-style:none;
-padding:0;
-}
-
-li{
-background:white;
-margin:10px auto;
-padding:10px;
-width:250px;
 border-radius:5px;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+#roadmap{
+margin-top:20px;
+text-align:left;
 }
