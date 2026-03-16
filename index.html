@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>SkillSYNC</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>SkillSYNC - Roadmap Builder</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>SkillSYNC</h1>
-<p>Personal Skill Tracker & Roadmap Builder</p>
-</header>
-
 <div class="container">
 
-<h2>Add New Skill</h2>
+<h1>🚀 SkillSYNC</h1>
+<p>Enter a skill to generate a roadmap</p>
 
-<input type="text" id="skillInput" placeholder="Enter skill name">
-<button onclick="addSkill()">Add Skill</button>
+<input type="text" id="skillInput" placeholder="Enter skill (Web Dev, ML, DSA...)">
 
-<h2>Your Skills</h2>
+<button onclick="generateRoadmap()">Build Roadmap</button>
 
-<ul id="skillList"></ul>
+<div id="roadmap"></div>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
