@@ -1,47 +1,106 @@
-let skills = [];
+const roadmaps = {
 
-function addSkill(){
+"web development":[
+"Learn HTML",
+"Learn CSS",
+"Learn JavaScript",
+"Learn Git & GitHub",
+"Learn React",
+"Learn Backend (Node.js)",
+"Learn Databases",
+"Build Full Stack Projects"
+],
 
-let skillInput = document.getElementById("skillInput");
+"web dev":[
+"Learn HTML",
+"Learn CSS",
+"Learn JavaScript",
+"Learn Git & GitHub",
+"Learn React",
+"Learn Backend (Node.js)",
+"Learn Databases",
+"Build Full Stack Projects"
+],
 
-let skill = skillInput.value;
+"machine learning":[
+"Learn Linear Algebra & Statistics",
+"Learn Python",
+"Learn NumPy & Pandas",
+"Data Preprocessing",
+"ML Algorithms",
+"Model Evaluation",
+"ML Projects",
+"Deploy Models"
+],
 
-if(skill === ""){
-alert("Enter a skill");
-return;
-}
+"ml":[
+"Learn Linear Algebra & Statistics",
+"Learn Python",
+"Learn NumPy & Pandas",
+"Data Preprocessing",
+"ML Algorithms",
+"Model Evaluation",
+"ML Projects",
+"Deploy Models"
+],
 
-skills.push(skill);
+"dsa":[
+"Time Complexity",
+"Arrays",
+"Strings",
+"Linked Lists",
+"Stacks & Queues",
+"Trees",
+"Graphs",
+"Dynamic Programming"
+],
 
-displaySkills();
+"deep learning":[
+"Python Basics",
+"Neural Networks",
+"TensorFlow / PyTorch",
+"CNN",
+"RNN",
+"DL Projects"
+],
 
-skillInput.value = "";
+"cyber security":[
+"Networking Basics",
+"Linux",
+"Python",
+"Cryptography",
+"Ethical Hacking",
+"Penetration Testing"
+]
 
-}
+};
 
-function displaySkills(){
+function generateRoadmap(){
 
-let list = document.getElementById("skillList");
+let skill = document.getElementById("skillInput").value.toLowerCase();
 
-list.innerHTML = "";
+let output = document.getElementById("roadmap");
 
-skills.forEach((skill,index)=>{
+if(roadmaps[skill]){
 
-let li = document.createElement("li");
+let result = "<h3>Roadmap for " + skill.toUpperCase() + "</h3>";
 
-li.innerHTML = skill +
-" <button onclick='removeSkill("+index+")'>Remove</button>";
+result += "<ol>";
 
-list.appendChild(li);
-
+roadmaps[skill].forEach(step=>{
+result += "<li>" + step + "</li>";
 });
 
+result += "</ol>";
+
+output.innerHTML = result;
+
 }
 
-function removeSkill(index){
+else{
 
-skills.splice(index,1);
+output.innerHTML = "<p>⚠️ Roadmap not available for this skill.</p>";
 
-displaySkills();
+}
 
 }
